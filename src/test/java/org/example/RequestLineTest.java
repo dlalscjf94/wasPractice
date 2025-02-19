@@ -1,7 +1,6 @@
 package org.example;
 
-import org.assertj.core.api.Assertions;
-import org.example.RequestLine;
+import org.example.calculator.RequestLine;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

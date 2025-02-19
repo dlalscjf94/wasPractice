@@ -1,4 +1,4 @@
-package org.example;
+package org.example.calculator;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,7 +6,6 @@ import org.slf4j.LoggerFactory;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.nio.Buffer;
 import java.nio.charset.StandardCharsets;
 
 public class CustomWebApplicationServer {
@@ -37,7 +36,7 @@ public class CustomWebApplicationServer {
 
                     String line;
                     while((line = br.readLine()) != "") {
-                        // 실제 요청이 어떠게 들어오는지 확인
+                        // 실제 요청이 어떻게 들어오는지 확인
                         System.out.println(line);
                     }
                 }

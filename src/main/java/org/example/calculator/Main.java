@@ -1,4 +1,6 @@
-package org.example;
+package org.example.calculator;
+
+import org.example.calculator.CustomWebApplicationServer;
 
 import java.io.IOException;
 

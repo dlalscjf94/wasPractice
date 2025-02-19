@@ -1,4 +1,4 @@
-package org.example;
+package org.example.calculator;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +20,7 @@ public class RequestLine {
     }
 
     public RequestLine(String requestLine) {
-        // GET /calculate?operand1=11&operator=*&operand2=55 HTTP/1.1
+        // GET /calculate ? operand1=11&operator=*&operand2=55 HTTP/1.1
         String[] tokens = requestLine.split(" ");
         this.method = tokens[0];
         logger.info("method check :: {}", method);
@@ -32,7 +32,8 @@ public class RequestLine {
         this.urlPath = urlPathTokens[0];
 
         if (urlPathTokens.length == 2) {
-            this.queryString = urlPathTokens[0];
+            this.queryString = urlPathTokens[1];
+            logger.debug("queryString check :: {}", this.queryString);
         }
     }
     // 객체끼리 비교할 때 equals and hashCode 필요
